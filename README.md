@@ -1,3 +1,3 @@
 # Mercury
 
-A description of this package.
+A Swift wrapper for accessing the Mercury parser from Postlight.
