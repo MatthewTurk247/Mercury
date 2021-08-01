@@ -20,8 +20,10 @@ open class Mercury {
                     completion(output)
                 }
             } catch let error as NSError {
-                print("Mercury failed to load: \(error.localizedDescription)")
-                completion([:])
+                print("Mercury failed to load: \(error.localizedDescription)\nThe following string could not be converted to a dictionary: \(prototypeString)")
+                DispatchQueue.main.async {
+                    completion([:])
+                }
             }
         }
     }
